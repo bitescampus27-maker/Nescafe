@@ -16,7 +16,7 @@ const handlePayment = async (
 ) => {
   try {
     const { data } = await axios.post(
-      "http://localhost:5000/api/payment/create-order",
+      "https://campusbite-nescafe.onrender.com/api/payment/create-order",
       { amount },
       { headers: token ? { token } : {} }
     );
@@ -35,7 +35,7 @@ const handlePayment = async (
 
         try {
           const verify = await axios.post(
-            "http://localhost:5000/api/payment/verify-payment",
+            "https://campusbite-nescafe.onrender.com/api/payment/verify-payment",
             {
               ...response,
               items,
@@ -229,7 +229,7 @@ const PlaceOrder = () => {
     pollingRef.current = setInterval(async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/order/status/${orderId}`,
+          `https://campusbite-nescafe.onrender.com/api/order/status/${orderId}`,
           { headers: token ? { token } : {} }
         );
 
