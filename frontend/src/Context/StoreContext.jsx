@@ -5,7 +5,7 @@ import axios from "axios";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = "http://localhost:5000";
+  const url = "https://campusbite-nescafe.onrender.com";
 
   const [food_list, setFoodList] = useState([]);
   const [cartItems, setCartItems] = useState({});
