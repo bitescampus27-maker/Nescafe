@@ -19,7 +19,7 @@ const Orders = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [modalType, setModalType] = useState("online"); // online | pos
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://campusbite-nescafe.onrender.com";
 
   // ONLINE APIs
   const LIST_API = `${API_BASE}/api/order/list`;
