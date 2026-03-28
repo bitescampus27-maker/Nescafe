@@ -9,7 +9,7 @@ const KitchenProvider = ({ children }) => {
   // ✅ Fetch status
   const fetchStatus = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/settings");
+      const res = await axios.get("https://campusbite-nescafe.onrender.com/api/settings");
 
       if (res.data.success) {
         setKitchenOpen(res.data.kitchenOpen);
@@ -25,7 +25,7 @@ const KitchenProvider = ({ children }) => {
       const newStatus = !kitchenOpen;
 
       const res = await axios.post(
-        "http://localhost:5000/api/settings/set-kitchen",
+        "https://campusbite-nescafe.onrender.com/api/settings/set-kitchen",
         { kitchenOpen: newStatus }
       );
 
