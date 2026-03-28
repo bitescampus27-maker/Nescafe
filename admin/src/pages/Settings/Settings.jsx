@@ -4,8 +4,8 @@ import "./Settings.css";
 
 const Settings = () => {
 
-  const SETTINGS_API = "http://localhost:5000/api/settings";
-  const COUPON_API = "http://localhost:5000/api/coupon";
+  const SETTINGS_API = "https://campusbite-nescafe.onrender.com/api/settings";
+  const COUPON_API = "https://campusbite-nescafe.onrender.com/api/coupon";
 
   const [deliveryFee, setDeliveryFee] = useState("");
   const [loading, setLoading] = useState(true);
