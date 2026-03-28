@@ -8,10 +8,10 @@ const Kitchen = () => {
   const loadOrders = async () => {
     try {
       const onlineRes = await axios.get(
-        "http://localhost:5000/api/order/kitchen"
+        "https://campusbite-nescafe.onrender.com/api/order/kitchen"
       );
       const posRes = await axios.get(
-        "http://localhost:5000/api/pos/orders"
+        "https://campusbite-nescafe.onrender.com/api/pos/orders"
       );
 
       const online = onlineRes.data.orders || [];
@@ -36,12 +36,12 @@ const Kitchen = () => {
   const markPrepared = async (order) => {
     try {
       if (order.isPOS) {
-        await axios.post("http://localhost:5000/api/pos/update-status", {
+        await axios.post("https://campusbite-nescafe.onrender.com/api/pos/update-status", {
           orderId: order._id,
           status: "prepared",
         });
       } else {
-        await axios.post("http://localhost:5000/api/order/prepared", {
+        await axios.post("https://campusbite-nescafe.onrender.com/api/order/prepared", {
           orderId: order._id,
           status: "prepared",
         });
