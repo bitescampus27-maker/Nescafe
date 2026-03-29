@@ -7,14 +7,14 @@ const KitchenProvider = ({ children }) => {
   const [kitchenOpen, setKitchenOpen] = useState(true);
 
   const fetchStatus = async () => {
-    const res = await axios.get("https://campusbite-nescafe.onrender.com/api/settings");
+    const res = await axios.get("https://campusbites-nescafe.onrender.com/api/settings");
     if (res.data.success) {
       setKitchenOpen(res.data.kitchenOpen);
     }
   };
 
   const toggleKitchen = async () => {
-    const res = await axios.post("https://campusbite-nescafe.onrender.com/api/settings/toggle-kitchen");
+    const res = await axios.post("https://campusbites-nescafe.onrender.com/api/settings/toggle-kitchen");
     if (res.data.success) {
       setKitchenOpen(res.data.kitchenOpen);
     }
