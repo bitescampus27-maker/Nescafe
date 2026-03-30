@@ -57,6 +57,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "https://campusbites-nescafe.netlify.app",
+      "https://campusbite-nescafeadmn.netlify.app",
     ],
     credentials: true,
   })
